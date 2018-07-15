@@ -4,6 +4,10 @@ window.onload = function() {
 	//Select all the spans in p (ignoring the ones in video)
 	const span = document.querySelector('p').querySelectorAll('span');
 	//Event listener for the time of the video. 
+
+
+
+
 	player.addEventListener('timeupdate', function getTime() {
 		var i;
 
@@ -17,6 +21,12 @@ window.onload = function() {
 			const dataStart = parseFloat(span[i].getAttribute("data-start"));
 			//Get the current spans data end time
 			const dataEnd = parseFloat(span[i].getAttribute("data-end"));
+
+			//If a span is clicked the video time will update to the
+			// data start value of span
+			span[i].addEventListener('click', function(){
+				player.currentTime = dataStart;
+			});
 			
 
 			//If the current videos time is greater than or equal to the spans data start AND less than or equal to the data end
@@ -32,3 +42,5 @@ window.onload = function() {
 		}
 	});
 }
+
+
