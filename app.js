@@ -3,20 +3,21 @@ window.onload = function() {
 	const player = document.querySelector('video');
 	//Select all the spans in p (ignoring the ones in video)
 	const span = document.querySelector('p').querySelectorAll('span');
-	//Event listener for the time of the video. 
+	//Event listener for ther4 time of the video. 
 
 
 
-
-	player.addEventListener('timeupdate', function getTime() {
-		var i;
+	//Add event listener for video time update
+	player.addEventListener('timeupdate', function() {
+		let i;
 
 		//Get the current video time to 3 decimal places
 		const time = parseFloat(player.currentTime.toFixed(3));
 
-		//Loops through all the spans when video plays and when the video time updates
+		//Loops through all the spans when the video time updates
 		for (i = 0; i < span.length; i++) {
-		
+
+					
 			//Get the current spans data start time
 			const dataStart = parseFloat(span[i].getAttribute("data-start"));
 			//Get the current spans data end time
