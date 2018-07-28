@@ -1,3 +1,4 @@
+$(document).ready(function(){$('video, audio').mediaelementplayer();});
 window.onload = function() {
 	//Select the video
 	const player = document.querySelector('video');
