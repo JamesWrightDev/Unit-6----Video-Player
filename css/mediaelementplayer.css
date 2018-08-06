@@ -42,7 +42,6 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     height: 100%;
     width: 100%;
 }
-
 .mejs__fill-container {
     background: transparent;
     margin: 0 auto;
@@ -158,6 +157,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     width: 80px;
 }
 
+
 .mejs__overlay:hover > .mejs__overlay-button {
     background-position: -80px -39px;
 }
@@ -208,10 +208,13 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     position: absolute;
     width: 100%;
     z-index: 3;
+
+
+
 }
 
 .mejs__controls:not([style*='display: none']) {
-    background: rgba(255, 0, 0, 0.7);
+    background: red;
     background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 }
@@ -241,6 +244,8 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     text-decoration: none;
     width: 20px;
 }
+
+
 
 /* :focus for accessibility */
 .mejs__button > button:focus {
